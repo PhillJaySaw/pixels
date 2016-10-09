@@ -38,16 +38,16 @@ var divList = document.querySelectorAll('div.pixel');
 // loop through the nodelist 'divlist' and add
 // an event listener to every node
 for(var i = 0; i < divList.length; i++) {
-
    divList[i].addEventListener('mouseenter', function() {
-      this.style.transitionDelay = '0s';
-      this.style.WebkitTransition = 'all ease-in 0 s'
+      //this.style.WebkitTransition = 'all ease-in 0 s';
+      this.style.transitionDelay = '0s'
       this.style.background = randColor();
    });
 
    divList[i].addEventListener('mouseleave', function() {
-      this.style.transitionDelay = '2s';
-      this.style.WebkitTransition = 'all ease-in 2s'
+      //this.style.WebkitTransition = 'all ease-in 1s';
+      this.style.transitionDelay = '1s'
+      this.style.transitionTimingFunction = 'ease-out';
       this.style.background = "none";
    });
 }
