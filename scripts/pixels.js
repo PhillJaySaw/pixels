@@ -6,7 +6,7 @@ pixel.setAttribute('class', 'pixel');
 function createPixels() {
 
    // counts the amount of pixels needed to fill the whole page
-   var boxCount = (window.innerWidth * window.innerHeight) / 30;
+   var boxCount = ((window.innerWidth / 30) * (window.innerHeight/30));
 
    for(var i = 0; i < boxCount; i++)
       document.body.appendChild(pixel.cloneNode(true));
@@ -47,7 +47,7 @@ for(var i = 0; i < divList.length; i++) {
    divList[i].addEventListener('mouseleave', function() {
       //this.style.WebkitTransition = 'all ease-in 1s';
       this.style.transitionDelay = '1s'
-      this.style.transitionTimingFunction = 'ease-out';
+      this.style.transitionTimingFunction = 'linear';
       this.style.background = "none";
    });
 }
